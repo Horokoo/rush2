@@ -6,7 +6,7 @@
 /*   By: adustin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/05 13:59:05 by adustin           #+#    #+#             */
-/*   Updated: 2020/09/05 16:24:39 by adustin          ###   ########.fr       */
+/*   Updated: 2020/09/05 18:47:28 by adustin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/stat.h>
 
 typedef struct	s_dict_small
 {
@@ -29,10 +32,15 @@ typedef struct	s_dict_big
 	char *dict_value;
 	struct s_dist_big *left;
 	struct s_dist_big *right;
-}				t_dist_small;
+}				t_dist_big;
 
-int search_dist(char *file_name);
+t_dist_big g_big_root;
+t_dist_small g_small_root;
+int search_dict(char *file_name);
 void ft_putchar(char c);
 void ft_putstr(char *str);
+void check_dict(char *file_name);
+void digit_break(void);
+int gen_digit_struct(char *file_name);
 
 #endif

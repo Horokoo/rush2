@@ -6,7 +6,7 @@
 /*   By: adustin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/05 15:04:37 by adustin           #+#    #+#             */
-/*   Updated: 2020/09/05 15:08:24 by adustin          ###   ########.fr       */
+/*   Updated: 2020/09/05 16:56:56 by adustin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putstr(char *str)
 {
 	while (*str)
-		ft_putchar((*str)++);
+		ft_putchar(*(str++));
 }
