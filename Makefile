@@ -6,7 +6,7 @@
 #    By: awave <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/05 14:34:45 by awave             #+#    #+#              #
-#    Updated: 2020/09/05 16:27:50 by awave            ###   ########.fr        #
+#    Updated: 2020/09/05 16:46:34 by adustin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = rush-02
@@ -19,7 +19,8 @@ OPTION	= -I ${HEADER}
 
 FLAG = -Wall -Wextra -Werror 
 
-all: 		
+all:
+			clear
 			gcc ${FLAG} ${OPTION} -o ${NAME} ${SRC}
 			
 
