@@ -6,8 +6,19 @@
 /*   By: awave <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/05 13:56:39 by awave             #+#    #+#             */
-/*   Updated: 2020/09/05 13:56:42 by awave            ###   ########.fr       */
+/*   Updated: 2020/09/05 15:08:32 by adustin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include "ft_dict.h"
+
+int main(int argc, char *argv[])
+{
+	if (argc < 2 || argc > 3)
+		ft_putstr("Error\n");
+	else
+		ft_putstr("norme\n");
+	return 0;
+}
 
