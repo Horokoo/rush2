@@ -1,29 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_dict.c                                       :+:      :+:    :+:   */
+/*   check_dict1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adustin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tlegenda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/05 18:27:30 by adustin           #+#    #+#             */
-/*   Updated: 2020/09/05 18:47:25 by adustin          ###   ########.fr       */
+/*   Created: 2020/09/06 14:01:38 by tlegenda          #+#    #+#             */
+/*   Updated: 2020/09/06 15:05:42 by tlegenda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
-
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
-{
-	while (*str)
-		ft_putchar(*(str++));
-}
+#include "ft_dict.h"
 
 void	ft_go_to_next_line(int *fd, int *i)
 {
@@ -75,13 +62,6 @@ int	length_check(void)
 	if (len_max < 41)
 		ft_putstr("Dict Error\n");
 	else
-		ft_putstr("COOL\n");
-	return (0);
-}
-
-
-int main(void)
-{
-	printf("%d\n", ft_dict_length());
+		digit_break();
 	return (0);
 }
