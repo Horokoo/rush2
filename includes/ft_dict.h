@@ -19,6 +19,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 
+char *g_file_array;
 
 int search_dict(char *file_name);
 void ft_putchar(char c);
