@@ -10,25 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void put_str(char *str)
-{
-	int i;
-
-	i = 0;
-	while(str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-}
+#include "ft_dict.h"
 
 int		ft_space(char *c)
 {
@@ -62,28 +44,14 @@ int *digit_check(char *argv)
 		k = ft_space(argv);
 			if (k < 0)
 			{
-				put_str("ошибка 1");
 				break;
 			}
 			else
 			{
-			   ft_putchar('0');
 			   break;
 			}
-		/*	if (argv[i] >= '0' && argv[i] <= '9')
-			{
-				put_str('0');
-				break;
-			}*/
 		}
 	i++;
-	return (0);
-}
-
-int main()
-{
-	char digit[] ="234  525";
-	digit_check(digit);
 	return (0);
 }
 

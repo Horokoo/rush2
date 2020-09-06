@@ -19,23 +19,8 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 
-typedef struct	s_dict_small
-{
-	int value;
-	char *dict_value;
-	struct s_dist_small *left;
-	struct s_dist_small *right;
-}				t_dist_small;
-typedef struct	s_dict_big
-{
-	int value;
-	char *dict_value;
-	struct s_dist_big *left;
-	struct s_dist_big *right;
-}				t_dist_big;
+char *g_file_array;
 
-t_dist_big g_big_root;
-t_dist_small g_small_root;
 int search_dict(char *file_name);
 void ft_putchar(char c);
 void ft_putstr(char *str);
