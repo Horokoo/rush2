@@ -48,7 +48,7 @@ void digit_output(char *str)
     {
         c = *str;
         digit_output(&c);
-        copy = ft_stronecopy(copy, str, len, 1);
+        copy = ft_stronecopy(NULL, str, len, 1);
         printf("%s\n", copy);
         free(copy);
     }
