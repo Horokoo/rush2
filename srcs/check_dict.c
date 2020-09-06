@@ -99,7 +99,7 @@ int		num_check(void)
 	return (j);
 }
 
-int		check_dict(void)
+int		check_dict(char *file_name, char *nbr)
 {
 	int length;
 
@@ -113,7 +113,7 @@ int		check_dict(void)
 		if (!(gen_digit_struct(file_name)))
 			ft_putstr("Dict Error\n");
 		else
-			digit_break();
+			digit_break(nbr);
 	}
     return (1);
 }

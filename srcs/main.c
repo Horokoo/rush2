@@ -27,9 +27,9 @@ int main(int argc, char *argv[])
 		if (file_exist)
         {
             if (argc == 2)
-                check_dict("number.dict");
+                check_dict("number.dict", argv[1]);
             else
-                check_dict(argv[2]);
+                check_dict(argv[2], argv[1]);
         }
 		else
 			ft_putstr("Dict Error\n");

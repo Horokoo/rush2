@@ -25,8 +25,9 @@ int search_dict(char *file_name);
 void ft_putchar(char c);
 void ft_putstr(char *str);
 int ft_strlen(char *str);
-void check_dict(char *file_name);
-void digit_break(void);
+int	check_dict(char *file_name, char *nbr);
+void digit_break(char *c);
 int gen_digit_struct(char *file_name);
+void digit_output(char *str);
 
 #endif
