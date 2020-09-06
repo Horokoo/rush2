@@ -12,25 +12,12 @@
 
 #include "ft_dict.h"
 
-void put_str(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-	write(1, &str[i], 1);
-		i++;
-	}
-}
-
 void digit_break(char * c)
 {
 	int i;
 	int ic;
 	int j;
 	int k;
-	char v;
 	char *fg;
 
 	i = 0;
@@ -52,7 +39,7 @@ void digit_break(char * c)
 			j++;
 		}
 		fg[j] = '\0';
-		printf("%s\n", fg);
+		digit_output(fg);
 		i++;
 		k--;
 		free(fg);

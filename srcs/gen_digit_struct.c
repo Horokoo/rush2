@@ -26,7 +26,7 @@ int gen_digit_struct(char *file_name)
 	while (read(fd, &c, 1))
 		file_len++;
 	close (fd);
-	g_file_array = (char *)malloc(sizeof(char) * file_len);
+	g_file_array = (char *)malloc(sizeof(char) * file_len + 2);
 	if ((fd = open(file_name, O_RDONLY)) == -1)
 		return (0);
 	while (read(fd, &c, 1))
@@ -37,6 +37,7 @@ int gen_digit_struct(char *file_name)
 			g_file_array[pos] = c;
 		pos++;
 	}
-	ft_putstr(g_file_array);
+	close (fd);
+	g_file_array[pos] = -1;
 	return (1);
 }

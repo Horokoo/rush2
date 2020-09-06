@@ -27,9 +27,15 @@ int main(int argc, char *argv[])
 		if (file_exist)
         {
             if (argc == 2)
-                check_dict("number.dict", argv[1]);
+            {
+				if(!check_dict("number.dict", argv[1]))
+				ft_putstr("Dict Error\n");
+			}
             else
-                check_dict(argv[2], argv[1]);
+            {
+				if(!(check_dict(argv[2], argv[1])))
+					ft_putstr("Dict Error\n");
+			}
         }
 		else
 			ft_putstr("Dict Error\n");

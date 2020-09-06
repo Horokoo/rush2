@@ -29,5 +29,6 @@ int	check_dict(char *file_name, char *nbr);
 void digit_break(char *c);
 int gen_digit_struct(char *file_name);
 void digit_output(char *str);
+void display_words (char *str);
 
 #endif

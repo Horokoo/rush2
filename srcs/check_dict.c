@@ -61,6 +61,7 @@ int		ft_dict_length(void)
 			ft_next_line(&fd, &i);
 		}
 	}
+	close(fd);
 	return (j);
 }
 
@@ -96,24 +97,25 @@ int		num_check(void)
 		if (buf == '\n')
 			j = 0;
 	}
+	close(fd);
 	return (j);
 }
 
 int		check_dict(char *file_name, char *nbr)
 {
-	int length;
+	// int length;
 
-	length = ft_dict_length();
-	if (length < 41)
-		return (0);
-	else if (num_check() == 0)
-		return (0);
+	// length = ft_dict_length();
+	// if (length < 41)
+	// 	return (0);
+	// else if (num_check() == 0)
+	// 	return (0);
+	// else
+	// {
+	if (!(gen_digit_struct(file_name)))
+		ft_putstr("Dict Error\n");
 	else
-	{
-		if (!(gen_digit_struct(file_name)))
-			ft_putstr("Dict Error\n");
-		else
-			digit_break(nbr);
-	}
+		digit_break(nbr);
+	// }
     return (1);
 }
